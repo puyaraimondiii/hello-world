@@ -4,7 +4,7 @@ def mFun(*param,base=3):
         if param[-1] == 5:
                 result = 0
                 for each in param:
-                        result +=each
+                        result += each
                 result = (result-5)*5
         else:
                 
