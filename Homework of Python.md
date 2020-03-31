@@ -1,4 +1,4 @@
-#Lesson 19
+#Lesson 19#
 ```python
 def mFun(*param,base=3)
         'a)计算打印所有参数的和乘以基数的结果\nb)如果参数最后一个参数为5,则设定基数为5，基数不参与求和计算'
