@@ -51,3 +51,18 @@ print("all nar are",end="")
 子字符串怎目标字符串中共出现3次
 >>>
 ```
+```python
+def findstr(strs,strt):
+    if len(strs) != 2:
+        strs = input("输入错误，请再次输入子字符串(两个字符)：")
+    count = 0
+    length = len(strt)
+    if strs not in strt:
+        print("在目标字符串中未找到子字符串")
+    else:
+        for each1 in range(length-1):
+            if strt[each1] == strs[0]:
+                if strt[each1+1] == strs[1]:
+                    count += 1
+        print('子字符串在目标字符串出现%d次' % count)
+```
