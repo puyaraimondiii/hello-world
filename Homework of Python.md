@@ -92,7 +92,7 @@ var=520
 fun(var)
 print(var)
 ```
-4.目测以下程序好打印什么内容？
+4.目测以下程序会打印什么内容？
 ```python
 var = 'Hi'
 def fun1():
