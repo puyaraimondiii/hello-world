@@ -96,7 +96,7 @@ print(var)
 ```python
 var = 'Hi'
 def fun1():
-    globalvar
+    global var
     var = 'Baby'
     return fun2(var)
 def fun2(var):
