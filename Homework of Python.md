@@ -121,6 +121,16 @@ print(fun1())
 不是回文联！
 >>>
 ```
+```python
+def rev(poem):
+    list1 = list(poem)
+    list2 = reversed(list1)
+    if list1 == list(list2):
+        print("厉害了！！！回文联！！！")
+    else:
+              print("平平无奇,不是回文联！")
+```
+
 1.编写一个函数，分别统计出传入字符串参数（可能不只一个参数）的英文字母、空格、数字和其他字符的个数。
 程序执行结果如图：
 ```python
