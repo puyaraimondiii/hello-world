@@ -140,3 +140,22 @@ def rev(poem):
 第2个字符串共有：英文字母17个，数字0个，空格5个，其他字符2个。
 >>>
 ```
+```python
+def calc(*word):
+    length = len(word)
+    for i in range(length):
+        alp = 0
+        num = 0
+        space = 0
+        other = 0
+        for each in word[i]:
+            if each.isalpha():
+                alp += 1
+            elif each.isspace():
+                space += 1
+            elif each.isdigit():
+                num += 1
+            else:
+                other += 1
+        print("第%d字符串共有：英文字母%d个，数字%d个，空格%d个，其他字符%d个" % (i+1,alp,num,space,other))
+```
