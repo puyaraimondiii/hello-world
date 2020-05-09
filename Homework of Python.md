@@ -174,10 +174,56 @@ inside()
 ```
 3.请问为什么代码A没有报错，但代码B却报错了？应该如何修改？  
 代码A：  
+```python
+def outside():
+    var = 5
+    def inside():
+        var = 3
+        print(var)
+    inside()
+outside()
+```
+```python
+def outside():
+    var = 5
+    def inside():
+        print(var)
+        var = 3
+        
+    inside()
+outside
+```
+
 代码B：  
-4.请问如何访问funIn()呢？  
+4.请问如何访问funIn()呢？ 
+```python
+def funOut():
+    def funIn():
+        print('冰果！你成功访问到我啦！') 
+    return funIn()
+```
 5.请问如何访问funIn()呢？  
+```python
+def funOut():
+    def funIn():
+        print('冰果~你成功访问到我啦！')
+    return funIn
+```
 6.以下是“闭包”的一个例子，请你目测下会打印什么内容？  
+```python
+def funX():
+    x = 5
+    def funY():
+        nonlocal x
+        x +=1
+        return x
+    return funY
+    
+a = funX()
+print(a())
+print(a())
+print(a())
+```
 动动手：  
 0.请用已学过的只是编写程序，统计下边这个长字符串中各个字符出现的次数并找到小甲鱼送给大家的一句话。  
 （由于我们还没有学习到文件读取方法，大家下载后拷贝过去即可）  
@@ -185,4 +231,5 @@ inside()
 1.请用已学过的知识编写程序，找到小甲鱼藏在下边这个长字符串中的密码，密码的埋藏点符合以下规律：  
 a)每位密码为单个小写字母  
 b)每位密码的左右两边均有且只有三个大写字母  
-(由于我们还没有学习到文件读取方法，大家下载后拷贝过去即可)  
+(由于我们还没有学习到文件读取方法，大家下载后拷贝过去即可)    
+请下载字符串文件：string2.txt  
