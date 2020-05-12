@@ -162,7 +162,9 @@ def calc(*word):
 ## Lesson 20
 测试题：  
 0.如果希望在函数中修改全局变量的值，应该使用什么关键字？  
+global
 1.在嵌套的函数中，如果希望在内部函数修改外部函数的局部变量，应该使用什么关键字？  
+nonlocal
 2.Python的函数可以嵌套，但要注意访问的作用域问题哦。请问以下代码存在什么问题呢？  
 ```Python
 def outside():
@@ -172,6 +174,7 @@ def outside():
 
 inside()
 ```
+inside is not definded
 3.请问为什么代码A没有报错，但代码B却报错了？应该如何修改？  
 代码A：  
 ```python
@@ -183,6 +186,7 @@ def outside():
     inside()
 outside()
 ```
+代码B：
 ```python
 def outside():
     var = 5
@@ -193,8 +197,17 @@ def outside():
     inside()
 outside
 ```
-
-代码B：  
+```python
+def outside():
+    var = 5
+    def inside():
+        nonlocal var
+        print(var)
+        var = 3
+        
+    inside()
+outside()
+```  
 4.请问如何访问funIn()呢？ 
 ```python
 def funOut():
@@ -202,6 +215,7 @@ def funOut():
         print('冰果！你成功访问到我啦！') 
     return funIn()
 ```
+funOut()
 5.请问如何访问funIn()呢？  
 ```python
 def funOut():
@@ -209,6 +223,7 @@ def funOut():
         print('冰果~你成功访问到我啦！')
     return funIn
 ```
+funOut()()
 6.以下是“闭包”的一个例子，请你目测下会打印什么内容？  
 ```python
 def funX():
@@ -224,6 +239,9 @@ print(a())
 print(a())
 print(a())
 ```
+6 7
+8 9 
+10 11
 动动手：  
 0.请用已学过的只是编写程序，统计下边这个长字符串中各个字符出现的次数并找到小甲鱼送给大家的一句话。  
 （由于我们还没有学习到文件读取方法，大家下载后拷贝过去即可）  
