@@ -259,7 +259,7 @@ def fun_A(x,y=3):
 ```
 1.请将下边的匿名函数转变为普通的屌丝函数？  
 ```python
-lambda x:x if x % 2 else None
+lambda x : x if x % 2 else None
 ```
 2.感受一下使用匿名函数后给你的编程生活带来的变化？  
 
