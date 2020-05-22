@@ -255,7 +255,7 @@ b)每位密码的左右两边均有且只有三个大写字母
 0.请使用lambda表达式将下边函数转变为匿名函数？  
 ```python
 def fun_A(x,y=3):
-    return x 8 y
+    return x * y
 ```
 1.请将下边的匿名函数转变为普通的屌丝函数？  
 ```python
