@@ -195,7 +195,7 @@ def outside():
         var = 3
         
     inside()
-outside
+outside 
 ```
 ```python
 def outside():
