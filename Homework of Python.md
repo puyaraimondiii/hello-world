@@ -267,23 +267,29 @@ lambda x : x if x % 2 else None
 ```python
 def fun1(x):
 	if x % 2:
-		print(x)
+		return x
 	else:
-		print()
+		return None
 ```
 2.感受一下使用匿名函数后给你的编程生活带来的变化？  
 
 3.你可以利用filter()和lambda表达式快速求出100以内所有3的倍数吗？  
 ```python
-list(filter(lambda x: x if x%3+1 == 1 else 0,range(1,101)))
+list(filter(lambda x:not(x % 3),range(1,100)))
 ```
 4.还记得列表推导式吗？完全可以使用列表推导式代替filter()和lambda组合，你可以做到吗？  
+```python
+[i for i in range(1,100) if not(i%3)]
+```
 5.还记得zip吗？使用zip会将两数以元祖的形式绑定在一块，例如：    
 ```python
 >>> list(zip([1,3,5,7,9,],[2,4,6,8,10]))
 [(1,2),(3,4),(5,6),(7,8),(9,10)]
 ```
 但如果我希望打包的形式是灵活多变的列表而不是元组（希望是[[1,2],[3,4],[5,6],[7,8],[9,10]]这种形式），你能做到吗？（采用map和lambda表达式）  
+```python
+list(map(lambda x,y:[x,y],[1,3,5,7,9],[2,4,6,8,10]))
+```
 6.请目测以下表达式会打印什么？  
 ```python
 def make_repeat(n):
@@ -293,6 +299,9 @@ double = make_repeat(2)
 print(double(8))
 print(double('FishC'))
 ```
+16  
+FishCFishC  
+
 ## Lesson 22
 0.递归在编程上的形式是如何表现的呢？  
 1.递归必须满足哪两个基本条件？  
