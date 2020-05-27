@@ -315,5 +315,12 @@ FishCFishC
 5.拿手机拍一张“递归自拍照片”  
 **动动手：**  
 0.使用递归编写一个power()函数模拟内建函数pow(),即power(x,y)为计算并返回x的y次幂的值。  
+```python
+def power(x,y):
+    if y == 0:
+        return 1
+    else:
+       return x * power(x,y-1) 
+```
 1.使用递归编写一个函数，利用欧几里得算法求最大公约数，例如gcd(x,y)返回值为参数x和参数y的最大公约数。
 
