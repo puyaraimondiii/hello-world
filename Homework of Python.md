@@ -323,4 +323,12 @@ def power(x,y):
        return x * power(x,y-1) 
 ```
 1.使用递归编写一个函数，利用欧几里得算法求最大公约数，例如gcd(x,y)返回值为参数x和参数y的最大公约数。
-
+```python
+def gcd(x,y):
+    if x <= y:
+        x,y = y,x
+    if x % y == 0:
+        return y
+    else:
+        return gcd(x,x%y)
+```
