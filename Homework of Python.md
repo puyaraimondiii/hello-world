@@ -335,7 +335,25 @@ def gcd(x,y):
 ## Lesson 23 & 24  
 动动手：  
 0.使用递归编写一个十进制转换为二进制的函数（要求采用“取2取余”的方式，结果与调用bin()一样返回字符串形式）。  
+```python
+def nbin(x):
+    result = ''
+    if x:
+        result = nbin(x//2)
+        return result +  str(x%2)
+    else:
+        return result
+```
 1.写一个函数get_digits(n),将参数n分解出来每个位的数字并按顺序存放到列表中。举例：get_digits(12345)==>[1,2,3,4,5]  
+```python
+result = []
+def get_digits(n):
+    if n > 0:
+        result.insert(0,n%10)
+        get_digits(n//10)
+get_digits(12345)
+print(result)
+```
 2.还记得求回文字符串那道题吗？现在让你使用递归的方式来求解，亲还能骄傲的说我可以吗？
 3.使用递归编程求解一下问题：  
   有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁，问第4个人岁数，他说比第3个人大2岁。问第三个人，又说比第2个人大2岁。问第2个人，说比第1个人大2岁。最后问第一个人，他说他10岁。请问第5个人多大？  
