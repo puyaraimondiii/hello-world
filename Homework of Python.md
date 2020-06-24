@@ -355,6 +355,20 @@ get_digits(12345)
 print(result)
 ```
 2.还记得求回文字符串那道题吗？现在让你使用递归的方式来求解，亲还能骄傲的说我可以吗？
+```python
+def is_palindrome(n,start,end):
+    if start > end:
+        return 1
+    else:
+        return is_palindrome(n,start+1,end-1) if n[start] == n[end] else 0
+string = input("请输入一串字符串：")
+length = len(string)-1
+
+if is_palindrome(string,0,length):
+               print('\"%s\"是回文字符串！' % string)
+else:
+               print('\"%s\"不是回文字符串！' % string)
+```
 3.使用递归编程求解一下问题：  
   有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁，问第4个人岁数，他说比第3个人大2岁。问第三个人，又说比第2个人大2岁。问第2个人，说比第1个人大2岁。最后问第一个人，他说他10岁。请问第5个人多大？  
 
